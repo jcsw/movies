@@ -1,0 +1,24 @@
+### Server ###
+server:
+  port: ${port:9050}
+
+### Management ###
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  server:
+    port: 8050
+
+### Logging ###
+logging:
+  level:
+    ROOT: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %magenta(%thread) %-5level %logger{5} %msg%n%ex{3}"
+
+### Spring ###
+spring:
+  application:
+    name: movies
